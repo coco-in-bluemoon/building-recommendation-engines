@@ -97,4 +97,48 @@
 - 배깅과 부스팅으로 구분한다,
   - 배깅: 모델을 단순 가중 합하여 결과를 생성. [R 구현](./r/random_forest.r)
   - 부스팅: 이전에 구축한 모델 정보를 활용해서 점진적으로 정확한 오차를 줄여가능 방식으로 모델을 결합 [R 구현](./r/gradient_descent_boosting.r)
-![출처: https://swalloow.github.io/bagging-boosting/](./r/../images/bagging_boosting.png)
+![출처: https://swalloow.github.io/bagging-boosting/](./images/bagging_boosting.png)
+
+
+# 4. 클러스터링 기법
+- [R 구현](./r/k_means_clustering.r)
+- 정답 데이터가 없는 비지도 학습
+- 데이터를 보고 유사한 클러스터를 찾는다. 대표적으로 K - Means Clustering이 있다.
+  - 클러스터 할당과 중심 이동 단계를 반복하여서 k개의 사전 정의한 클러스터를 생성한다
+  - 사전 정의한 클러스터 개수 k는 Elbow Method로 결정한다.
+
+
+![](./images/cluster.png)
+![](./images/elbow_method.png)
+
+
+# 5. 차원 축소
+- [R 구현](./r/pca.r)
+- 정답 데이터가 없는 비지도 학습
+- 차원의 저주를 피하기 위해 차원 축소는 필수적
+  - 차원의 저주: 데이터의 차원이 커지면서 관측 데이터가 차원 공간에서 차지하는 공간의 비율이 희소해지는 문제
+- 대표적인 차원 축소 방법이 PCA
+  - 선형 대수를 활용한 차원 축소 (데이터의 선형 관계 기반)
+  - 데이터의 고유 벡터를 찾으며, 고유벡터에 관측 데이터를 사영한다. 이때 사영된 데이터의 분산이 최대가 된다.
+  - 분산이 최대가 되는 고유 벡터들이 데이터의 Pricipal Complnent이다.
+
+![](./images/pca.png)
+
+
+# 6. 벡터 공간 모델
+- [R 구현](./r/tdm.r)
+- 텍스트를 벡터로 표현하는 방법
+  - 1) 단어 빈도 활용(TF): 문헌에 속한 단어의 개수를 세어서 벡터화
+  - 2) 단어-역문헌 빈도 (Tf-Idf): 단어 빈도와 문헌 빈도를 고려하여서 희소한 단어일 수록 높은 가중치를 주는 벡터화 방법
+- 텍스트를 벡터화하거나 추천 시스템에서 아이템을 아이템의 특징으로 벡처화할 때 사용
+
+
+# 7. 평가 기법
+- 과소 적합(Unserfitting)과 과대 적합(Overfitting)을 모두 피하는 모델이 좋은 모델
+  - 과대 적합을 피하기 위해 교차 검증(cross validation)과 정규화(normalization) 수행
+- 모델의 주요 평가 지표로는 RMSE, MAE, Precision과 Recall이 있다.
+
+![](./equations/rmse.png)
+![](./equations/mae.png)
+![](./equations/precision_recall.png)
+
