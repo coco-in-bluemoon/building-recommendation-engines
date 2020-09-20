@@ -58,3 +58,43 @@
   - VT: kxn 행렬
 
 ![](./equations/svd.png)
+
+
+# 3. 머신 러닝 기법
+- 정답 데이터가 있는 지도 학습 과제로 회귀와 분류 과제가 있다.
+- 추천 시스템의 과제는 정답 데이터(평점 또는 선호)를 파악하는 머신 러닝 과제로 볼 수 있다. 
+
+## 1) 선형 회귀 (Linear Regression)
+- [R 구현](./r/linear_regression.r)
+- 정답 데이터가 연속형 변수인 회귀 과제이다.
+
+## 2) 선형 분류 (Logistic Regression)
+- [R 구현](./r/logistic_regression.r)
+- 정답 데이터가 클래스인 분류 과제이다.
+- Logistic 함수를 사용한다.
+![](./equations/logistic_function.png)
+
+## 3) KNN 분류
+- [R 구현](./r/knn_classification.r)
+- 최근접 이웃에 따라서 클래스가 결정되는 분류 방법이다.
+- 비모수 접근 방법으로 비선형적인 데이터에 효과가 있다.
+- 추천 시스템에 광범위하게 사용한다
+
+## 4) SVM 분류
+- [R 구현](./r/svm_classification.r)
+- 마진을 최대화하는 초평면을 찾는 분류 방법이다.
+  - 마진: 서포트 벡터와 초평면 사이의 거리
+  - 서포트 벡터: 클래스의 경계에 위치하여서 초평면과 가장 가까운 벡터
+- 비선형 데이터를 위해서 커널 기법을 사용한다.
+
+## 5) Decision Tree 분류
+- [R 구현](./r/decision_tree.r)
+- 변수의 조건에 따라서 트리를 확장하면서 분류하는 방법이다.
+![](./images/tree.png)
+
+## 6) 앙상블 기법
+- 단일 모델이 아니라 다수의 모델을 결합하여서 높은 성능을 도모하는 방법
+- 배깅과 부스팅으로 구분한다,
+  - 배깅: 모델을 단순 가중 합하여 결과를 생성. [R 구현](./r/random_forest.r)
+  - 부스팅: 이전에 구축한 모델 정보를 활용해서 점진적으로 정확한 오차를 줄여가능 방식으로 모델을 결합 [R 구현](./r/gradient_descent_boosting.r)
+![출처: https://swalloow.github.io/bagging-boosting/](./r/../images/bagging_boosting.png)
