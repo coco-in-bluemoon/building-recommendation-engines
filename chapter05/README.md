@@ -21,3 +21,15 @@
 - 파라미터 튜닝을 통한 최적의 값 구함
 
 - ![](./images/roc_curve_itemcf_tuning.png)
+
+
+# 2. Movielens
+- Python로 구현한 Collaborative Filtering 추천 시스템
+
+## 1) User Based Collaborative Filtering
+- [Python 구현](./python/user_cf.py)
+- KNN을 사용하는 것이 성능을 높인다.
+
+## 2) Item Based Collaborative Filtering
+- [Python 구현](./python/item_cf.py)
+- 데이터에 있는 아이템을 기준으로 유사한 아이템을 찾는다.
