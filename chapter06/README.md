@@ -18,12 +18,12 @@
 - Movielens 데이터 세트 [R 구현](./r/movielens_content_based.r)
   - 평점 1\~3은 0, 평점 4\~5는 1인 이진 분류 과제
   - 랜덤 포레스트로 모델 구현
-- MS 웹 사이트 데이터 세트 [Python 구현]()
+- MS 웹 사이트 데이터 세트 [Python 구현](./python/msweb_content_based.py)
   - TF-IDF로 아이템 프로필 생성
   - 사용자 프로필과 아이템 프로필의 코사인 유사도로 선호도 예측
   - 프로필이 유사하다 == 사용자의 선호 특징과 아이템의 특징이 유사하다
 
 ## 상황 인식 추천 시스템 구현
-- Movielens 데이터 세트 [R 구현]()
+- Movielens 데이터 세트 [R 구현](./r/movielens_context_based.r)
   - timestamp에서 시간을 추출해서 상황 프로파일 구축
 
