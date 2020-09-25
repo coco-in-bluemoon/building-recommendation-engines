@@ -26,6 +26,7 @@ export PYSPARK_DRIVER_PYTHON_OPTS='notebook --ip 0.0.0.0'
 
 # 2. ALS 추천 시스템
 - pyspark 기반의 [Jupyter Notebook 구현](./python-jupyter/ALS%20Spark%20MLLib.ipynb)
+  - [nbviewer 링크](https://nbviewer.jupyter.org/github/coco-in-bluemoon/building-recommendation-engines/blob/master/chapter07/python-jupyter/ALS%20Spark%20MLLib.ipynb)
 - map 연산으로 통해 RDD 처리
 - ALS 모델 학습 및 평가
 
