@@ -33,4 +33,5 @@ $ docker run \
 ![](./images/graph_friends.png)
 
 - [추천 시스템을 위한 스크립트](./neo4j_rating.script)
+
 ![](./images/graph_ratings.png)
