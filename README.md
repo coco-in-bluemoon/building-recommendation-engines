@@ -8,6 +8,7 @@
 5. [협업 필터링 추천 엔진 구축하기](./chapter05/README.md)
 6. [개인화 추천 엔진 구축하기](./chapter06/README.md)
 7. [스파크를 사용해 실시간 추천 엔진 구축하기](./chapter07/README.md)
+8. [Neo4jㄹㅗ 실시간 추천 엔진 구축하기](./chapter08/README.md)
 
 ☪︎ 프로그램을 실행하기 위해서 현재 디렉토리를 기준으로 파일의 경로를 지정해주세오. <br>
 ```python chapter02/python/recommender.py``` (O) <br>

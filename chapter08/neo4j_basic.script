@@ -1,0 +1,27 @@
+# Create Person Node with label john, pual, krish
+CREATE (john: Person {name: "John"}) RETURN john
+CREATE (paul: Person {name: "Paul"}) RETURN paul
+CREATE (krish: Person {name: "Krish"}) RETURN krish
+
+# Return Nodes made
+MATCH (k:Person {name:'Krish'}), (p:Person {name:'Paul'}), (j:Person {name:'John'}) RETURN k, p, j
+
+# Create Relationships between Person Nodes
+MATCH(k:Person {name:'Krish'}),(p:Person {name:'Paul'}),(j:Person {name:'John'})
+CREATE (k)-[:FRIENDOF]->(j)
+CREATE (j)-[:FRIENDOF]->(k)
+CREATE (p)-[:FRIENDOF]->(j)
+CREATE (p)-[:FRIENDOF]->(k)
+CREATE (k)-[:FRIENDOF]->(p)
+
+# Return Relationships
+MATCH (n:Person)-[f:FRIENDOF]->(q:Person) RETURN n,f,q
+
+# Set Relationship Properties
+MATCH
+	(k1:Person {name:'Krish'})-[f1:FRIENDOF]->(p1:Person {name:'Paul'}),
+    (k2:Person {name:'Krish'})<-[f2:FRIENDOF]-(p2:Person {name:'Paul'})
+	SET f1.friendsince='2016', f2.friendsince='2015'
+
+# Read CSV File
+LOAD CSV WITH HEADERS FROM 'file:/ratings.csv' AS ratings RETURN ratings
